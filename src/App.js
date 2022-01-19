@@ -10,7 +10,8 @@ class App extends Component {
     searchDate: "",
     photo: "",
     date: "",
-    count: 0
+    count:0,
+    current:false
   };
 
   changeDate = e => {
@@ -22,12 +23,22 @@ class App extends Component {
     
   }
   increase =() => {
-    let newCount = this.state.count + 1
-    this.setState({
-      count: newCount 
-    })
+    if(!this.state.current){
+    this.setState((prev) => {
+      return{
+        count: prev.count +1,
+        current: true 
+      };
+    });
+  } else{
+    this.setState((prev) => {
+      return{
+        count: prev.count-1,
+        current: false
+      };
+    });
   }
-
+}
   componentDidMount() {
     fetch(`https://api.nasa.gov/planetary/apod?api_key=WmOjFqahyE4g2ZqH1msZLeuaGROmYsbubuQnzwIP`)
     .then(res=> res.json())
@@ -46,12 +57,12 @@ class App extends Component {
         <h1>Spacestagram</h1>
         <Date
         changeDate={this.changeDate}/> 
+        <div className='btn'> 
+          <button5 onClick={this.increase}> ❤️ Like: {this.state.count}</button5>
+        </div>
         <Main 
         photo={this.state.photo}/>
-        <div className='heart'>
-            <button onClick={this.increase}>❤️ Likes: {this.state.count}</button>
-        </div>
-        </div>
+      </div>
     )
   }
 }
