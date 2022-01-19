@@ -14,11 +14,18 @@
   text-align: center;
   font-size: 16px;
   margin-top: 25px;
-  margin-right: 450px;
-  font-size: 30px;
+  margin-right: 510px;
+  font-size: 20px;
 }
-
-
+.title {
+  text-align: center;
+  margin: auto;
+  display: center;
+  font-size: 50px;
+  background: -webkit-linear-gradient(#B881E7, #bbc7e7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

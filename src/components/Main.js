@@ -1,8 +1,10 @@
 import React from 'react';
-import './Card.css';
+import './Card.css'; 
 
+const Main = props => 
+    // const likebtn =() => {
 
-const Main = props =>
+    // };
     <div className='card-deck'>
         <div className='title-img'>
             <h3>{props.photo.title}</h3>  
@@ -13,7 +15,6 @@ const Main = props =>
         <div className='date'> 
             <p>{props.photo.date}</p>
         </div>
-
         <div className='explanation'> 
             <p>{props.photo.explanation}</p>
         </div> 

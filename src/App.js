@@ -3,7 +3,6 @@ import React, {Component} from 'react';
 import Main from './components/Main';
 import Date from './components/Date';
 
-
 class App extends Component {
 
   state ={
@@ -54,14 +53,15 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h1>Spacestagram</h1>
+        <h1 class="title">Spacestagram</h1>
         <Date
         changeDate={this.changeDate}/> 
-        <div className='btn'> 
-          <button5 onClick={this.increase}> ❤️ Like: {this.state.count}</button5>
-        </div>
         <Main 
-        photo={this.state.photo}/>
+        photo={this.state.photo}
+        />
+       <div className='btn'> 
+       <button5 onClick={this.increase}> ❤️ Like: {this.state.count}</button5>
+      </div>
       </div>
     )
   }
