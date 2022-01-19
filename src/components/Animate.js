@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import PlanetOne from './images/Jupiter.png';
 import PlanetTwo from './images/Saturn.png';
 import PlanetThree from './images/aliens.png';
-// import PlanetFour from './images/rocket.png';
 
 const Section = styled.section`
   height: 100vh;
@@ -81,11 +80,15 @@ const ColumnRight = styled.div`
 `;
 const scrollDown = () => {
     window.scrollTo({
-      top: 610,
+      top: 800,
     //   top: document.documentElement.scrollHeight, 
       behavior: 'smooth' // for smoothly scrolling
     });
   }; 
+  //refresh to load first section 
+  window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+  }
 const Animate = () => {
   const fadeLeft = {
     hidden: { opacity: 0, x: -100 },

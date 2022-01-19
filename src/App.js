@@ -40,6 +40,7 @@ class App extends Component {
   }
 }
   componentDidMount() {
+    window.scrollTo(0,0)
     fetch(`https://api.nasa.gov/planetary/apod?api_key=WmOjFqahyE4g2ZqH1msZLeuaGROmYsbubuQnzwIP`)
     .then(res=> res.json())
     .then(json => this.setState({ photo: json}))
