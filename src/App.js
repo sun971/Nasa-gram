@@ -2,6 +2,7 @@ import './App.css';
 import React, {Component} from 'react';
 import Main from './components/Main';
 import Date from './components/Date';
+import Animate from './components/Animate'
 
 class App extends Component {
 
@@ -53,14 +54,15 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h1 class="title">Spacestagram</h1>
+        <Animate/>
+        {/* <h1 class="title">Spacestagram</h1> */}
         <Date
         changeDate={this.changeDate}/> 
         <Main 
         photo={this.state.photo}
         />
-       <div className='btn'> 
-       <button5 onClick={this.increase}> ❤️ Like: {this.state.count}</button5>
+      <div className='btn'> 
+        <button5 onClick={this.increase}> ❤️ Like: {this.state.count}</button5>
       </div>
       </div>
     )
