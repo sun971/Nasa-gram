@@ -9,7 +9,8 @@ class App extends Component {
   state ={
     searchDate: "",
     photo: "",
-    date: ""
+    date: "",
+    count: 0
   };
 
   changeDate = e => {
@@ -19,6 +20,12 @@ class App extends Component {
     this.setState({ searchDate: givenDate });
     this.getPhoto(givenDate);
     
+  }
+  increase =() => {
+    let newCount = this.state.count + 1
+    this.setState({
+      count: newCount 
+    })
   }
 
   componentDidMount() {
@@ -41,6 +48,9 @@ class App extends Component {
         changeDate={this.changeDate}/> 
         <Main 
         photo={this.state.photo}/>
+        <div className='heart'>
+            <button onClick={this.increase}>❤️ Likes: {this.state.count}</button>
+        </div>
         </div>
     )
   }

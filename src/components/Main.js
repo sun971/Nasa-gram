@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './Card.css';
+
 
 const Main = props =>
     <div className='card-deck'>
@@ -12,9 +13,10 @@ const Main = props =>
         <div className='date'> 
             <p>{props.photo.date}</p>
         </div>
+
         <div className='explanation'> 
             <p>{props.photo.explanation}</p>
-        </div>    
+        </div> 
     </div>;
 
 export default Main;
