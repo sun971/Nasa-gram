@@ -71,11 +71,11 @@ const ColumnRight = styled.div`
   }
   ${Image}:nth-child(2) {
     top: 170px;
-    right: 10px;
+    left: 500px;
   }
   ${Image}:nth-child(3) {
     top: 290px;
-    left: 10px;
+    left: 100px;
   }
 `;
 const scrollDown = () => {
