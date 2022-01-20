@@ -2,9 +2,6 @@ import React from 'react';
 import './Card.css'; 
 
 const Main = props => 
-    // const likebtn =() => {
-
-    // };
     <div className='card-deck'>
         <div className='title-img'>
             <h3>{props.photo.title}</h3>  
